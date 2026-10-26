@@ -41,21 +41,31 @@ public class App {
         // End Gabungan Class
 
         // Depedency Injection
-        Category categoryElektrik = new Category("Electric", 10);
-        Category pakaian = new Category("Pakaian Pria", 5);
+        // Category categoryElektrik = new Category("Electric", 10);
+        // Category pakaian = new Category("Pakaian Pria", 5);
 
-        Product product1 = new Product("Laptop MacBook Pro M10", categoryElektrik);
-        Product product2 = new Product("Kemeja", pakaian);
-        Product product3 = new Product("Mouse", categoryElektrik);
+        // Product product1 = new Product("Laptop MacBook Pro M10", categoryElektrik);
+        // Product product2 = new Product("Kemeja", pakaian);
+        // Product product3 = new Product("Mouse", categoryElektrik);
 
         // product1.showProductInfo();
         // System.out.println("============================");
         // product2.showProductInfo();
         // System.out.println("============================");
         // product3.showProductInfo();
-        pakaian.addStock(10);
-        System.out.println("Stok: " + pakaian.getStock());
-        pakaian.addStock(-10);
-        System.out.println("Stok: " + pakaian.getStock());
+        // pakaian.addStock(10);
+        // System.out.println("Stok: " + pakaian.getStock());
+        // pakaian.addStock(-10);
+        // System.out.println("Stok: " + pakaian.getStock());
+
+        // Inheritence
+        PhysicalProduct product = new PhysicalProduct("P001", "Keyboard", 350000, 10);
+
+        DigitalProduct ebook = new DigitalProduct("DIG001", "E-book", 10000);
+
+        product.showInfo();
+        product.addStock(5);
+        System.out.println();
+        ebook.showInfo();
     }
 }

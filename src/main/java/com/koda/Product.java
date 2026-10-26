@@ -1,6 +1,6 @@
 package com.koda;
 
-public class Product {
+public abstract class Product {
     // Menggabungkan 2 Class
     // private String productName;
     // private Category productCategory;
@@ -31,41 +31,42 @@ public class Product {
     // End Gabungan Class
 
     // public Category test;
-    // String productCode;
-    // String name;
-    // int price;
-    // int stock;
+    private String productCode;
+    private String name;
+    private int price;
+    private int stock;
 
     // // Constructor
-    // public Product(String productCode, String name, int price, int stock) {
-    // this.productCode = productCode;
-    // this.name = name;
-    // this.price = price;
-    // this.stock = stock;
-    // }
+    public Product(String productCode, String name, int price, int stock) {
+        this.productCode = productCode;
+        this.name = name;
+        this.price = price;
+        this.stock = stock;
+    }
 
-    // public void showInfo() {
-    // System.out.println("Product Code: " + productCode);
-    // System.out.println("Name : " + name);
-    // System.out.println("Price : Rp. " + price);
-    // System.out.println("Stock : " + stock);
-    // }
+    public void showInfo() {
+        System.out.println("Product Code: " + productCode);
+        System.out.println("Name : " + name);
+        System.out.println("Price : Rp. " + price);
+        System.out.println("Stock : " + stock);
 
-    // public void addStock(int quantity) {
-    // stock += quantity;
-    // }
+    }
+
+    public void addStock(int quantity) {
+        stock += quantity;
+    }
 
     // Depedency Injection / Depedency Constructor
-    private String productName;
-    private Category productCategory;
+    // private String productName;
+    // private Category productCategory;
 
-    public Product(String productName, Category productCategory) {
-        this.productName = productName;
-        this.productCategory = productCategory;
-    }
+    // public Product(String productName, Category productCategory) {
+    // this.productName = productName;
+    // this.productCategory = productCategory;
+    // }
 
-    public void showProductInfo() {
-        System.out.println("Product: " + productName);
-        System.out.println("Category: " + productCategory.getCategoryName());
-    }
+    // public void showProductInfo() {
+    // System.out.println("Product: " + productName);
+    // System.out.println("Category: " + productCategory.getCategoryName());
+    // }
 }
